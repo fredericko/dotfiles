@@ -25,27 +25,18 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 # Change $SCRIPT_DIR to the location of your scripts!
-command=~/.config/i3blocks/scripts/$BLOCK_NAME
+command=~/.config/i3blocks/blockets/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
-
 [volume]
-label=♪ 
+label=🔊
 interval=once
 signal=10
 #STEP=5%
 
-# Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM 
+label=🧠
 separator=false
 interval=30
 
@@ -54,28 +45,23 @@ interval=30
 interval=persist
 markup=pango
 
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
 [cpu_usage]
 label=CPU
 interval=10
 min_width=CPU 100.00%
 #separator=false
 
-# Temperature
-#
-# Support multiple chips, though lm-sensors.
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
 [temperature]
-label=TEMP 
+label=🌡️
 interval=10
 
-# Date Time
-#
+[weather]
+label=☁️
+interval=600
+
 [time]
+label=📅
 command=date '+%d/%m/%Y %H:%M'
 interval=5
+
 
