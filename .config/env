@@ -11,7 +11,7 @@
 export HISTCONTROL=ignoreboth:erasedups
 
 # Make vim the default editor
-
+bindkey -e
 export EDITOR='vim'
 export VISUAL='vim'
 

@@ -2,6 +2,8 @@
 
 a=$(cat ~/.config/i3blocks/blockets/.openweather.key)
 
-$(curl "https://api.openweathermap.org/data/2.5/weather?q=Cuiaba,br&units=metric&APPID=$a" -o /tmp/openweather)
-
+wget -q --tries=10 --timeout=20 --spider http://duckduckgo.com
+if [[ $? -eq 0 ]]; then 
+    $(curl "https://api.openweathermap.org/data/2.5/weather?q=Cuiaba,br&units=metric&APPID=$a" -o /tmp/openweather)
+fi
 echo $(jq '.main.temp, .main.feels_like, .main.humidity, .name' /tmp/openweather | tr '\n' ':' | awk -F: '{print $1"("$2")°C H: "$3"%/"$4}' | tr -d '"')

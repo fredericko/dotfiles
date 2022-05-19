@@ -40,17 +40,6 @@ label=🧠
 separator=false
 interval=30
 
-[bandwidth]
-#INTERFACE=wlp3s0
-interval=persist
-markup=pango
-
-[cpu_usage]
-label=CPU
-interval=10
-min_width=CPU 100.00%
-#separator=false
-
 [temperature]
 label=🌡️
 interval=10
