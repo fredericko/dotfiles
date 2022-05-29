@@ -34,7 +34,6 @@ interval=once
 TERMINAL=alacritty
 
 [volume]
-label=🔊
 interval=once
 signal=10
 #STEP=5%
