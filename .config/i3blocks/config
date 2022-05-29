@@ -29,6 +29,10 @@ command=~/.config/i3blocks/blockets/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[news]
+interval=once
+TERMINAL=alacritty
+
 [volume]
 label=🔊
 interval=once
