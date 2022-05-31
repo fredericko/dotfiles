@@ -5,7 +5,7 @@
 
 case $BLOCK_BUTTON in
         1) setsid "$TERMINAL" -e newsboat ;;
-	    2) setsid newsup >/dev/null & exit ;;
+	    2) setsid -f newsup >/dev/null & exit ;; 
         3) notify-send "📰 News module" "\- Shows unread news items
 - Shows 🔃 if updating with \`newsup\`
 - Left click opens newsboat
@@ -13,4 +13,5 @@ case $BLOCK_BUTTON in
 <b>Note:</b> Only one instance of newsboat (including updates) may be running at a time." ;;
 esac
 
+[ -f /tmp/newsupdate ] && cat /tmp/newsupdate | awk '{ print "📰 "$1 }'
 echo "$(newsboat -x print-unread | awk '{ print "📰 " $1}' | sed s/^0//g)"
