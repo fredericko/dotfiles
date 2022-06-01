@@ -128,6 +128,9 @@ assign [class="Brave"] $ws2
 assign [class="Steam"] $ws3
 assign [class="qBittorrent"] $ws5
 
+# Any Dialog window should spawn where it was called
+for_window [window_type="dialog"] floating enable, move container to workspace current
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)

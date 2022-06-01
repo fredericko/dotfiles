@@ -8,6 +8,6 @@ esac
 
 print_block() {
     [[ $(pamixer --get-mute) = "true" ]] && echo 🔇 && exit
-    echo 🔊 $(pamixer --get-volume)% ;
+    echo 🔊 $(pamixer --get-volume-human);
 }
 print_block
