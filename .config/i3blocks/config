@@ -27,7 +27,7 @@
 # Change $SCRIPT_DIR to the location of your scripts!
 command=~/.config/i3blocks/blockets/$BLOCK_NAME
 separator_block_width=15
-markup=none
+markup=pango
 
 [news]
 interval=once
@@ -40,19 +40,19 @@ signal=10
 #STEP=5%
 
 [memory]
-label=🧠 
+label= 
 interval=30
 
 [temperature]
-label=🌡️
+label= 
 interval=10
 
 [weather]
-label=☁️ 
+label= 
 interval=600
 
 [time]
-label=📅 
+label= 
 command=date '+%d/%m/%Y (%a) %H:%M'
 interval=5
 

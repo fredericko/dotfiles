@@ -7,7 +7,7 @@ case $BLOCK_BUTTON in
 esac
 
 print_block() {
-    [[ $(pamixer --get-mute) = "true" ]] && echo 🔇 && exit
-    echo 🔊 $(pamixer --get-volume-human);
+    [[ $(pamixer --get-mute) = "true" ]] && echo 婢 && exit
+    echo 墳 $(pamixer --get-volume-human);
 }
 print_block
