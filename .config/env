@@ -49,7 +49,6 @@ export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority" #Breaks yuzu emulator
 export SCREENRC="$XDG_CONFIG_HOME/screen/screenrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export VIMINIT="set nocp | source ${XDG_CONFIG_HOME}/vim/vimrc | source ${XDG_CONFIG_HOME}/vim/.vimrc"
 export PATH="$HOME/.symfony/bin:$PATH"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
@@ -125,4 +124,4 @@ alias hw="hwinfo --short"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
-sfetch 
+sfetch 2>/dev/null 
