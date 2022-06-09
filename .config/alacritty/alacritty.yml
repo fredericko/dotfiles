@@ -4,19 +4,19 @@ scrolling:
 # Font configuration
 font:
   normal:
-    family: hack
+    family: Hack
     style: Regular
 
   bold:
-    family: hack
+    family: Hack
     style: Bold
 
   italic:
-    family: hack
+    family: Hack
     style: Italic
 
   bold_italic:
-    family: monospace
+    family: Hack 
     style: Bold Italic
 
   # Point size

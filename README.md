@@ -9,14 +9,15 @@
 
 | Packages   |  Url  | Description |
 | --------- | ----- | ----------- |
-|  i3-gaps |[Github][1] | Fork of [i3 Window Manager][2] with gaps between the windows implemented |
-|  i3blocks|[Github][3] | Status Bar for i3 |
-|  picom   |[Github][4] | Compositor to make windows transparent |
-|  zsh     |  | Highly customizable shell |
-|  Neovim  |  | Highly customizable/extendable text editor|
-|  Nitrogen|  | Background image manager |
-|  Nerd Font (any) |[Github][5] | Patched fonts with glyphs of all popular fonts like font awesome and material design |
-|  Newsboat |[Github][6] | Terminal based rss feed |
+| 🗔  i3-gaps |[Github][1] | Fork of [i3 Window Manager][2] with gaps between the windows implemented |
+| 🗖  i3blocks|[Github][3] | Status Bar for i3 |
+|   picom   |[Github][4] | Compositor to make windows transparent |
+| 🖵  zsh     |  | Highly customizable shell |
+| 🖹  Neovim  |  | Highly customizable/extendable text editor|
+| 🖽  Nitrogen|  | Background image manager |
+| 🗛  Nerd Font (any) |[Github][5] | Patched fonts with glyphs of all popular fonts like font awesome and material design |
+| 📰 Newsboat |[Github][6] | Terminal based rss feed |
+| 🖴  Udiskie | | USB Automatic Mounter |
 
 [1]: https://github.com/Airblader/i3
 [2]: https://github.com/i3/i3
