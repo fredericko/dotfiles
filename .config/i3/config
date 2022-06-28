@@ -5,7 +5,7 @@
 set $mod Mod4
 
 #hide_edge_borders both
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 gaps inner 10
 #gaps outer 0
 
@@ -131,6 +131,7 @@ assign [class="qBittorrent"] $ws5
 
 # Any Dialog window should spawn where it was called
 for_window [window_type="dialog"] floating enable, move container to workspace current
+for_window [class="Anki"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
