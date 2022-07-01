@@ -48,11 +48,12 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
-  -- use "lewis6991/impatient.nvim"
+  use "numToStr/Comment.nvim"
+  use "lewis6991/impatient.nvim"
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  -- use "lunarvim/darkplus.nvim"
   use 'navarasu/onedark.nvim'
 
   -- cmp (completion) plugins

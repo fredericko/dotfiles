@@ -43,7 +43,7 @@ export LESSHISTFILE="-"
 # Fix paths
 #export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" #Might break some dm
 export GTK2_RC_FILES="$HOME/.config/gtk-2.0/gtkrc-2.0"
-#export WGETRC="$HOME/.config/wget/wgetrc"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GPG_TTY=$(tty)
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
@@ -70,6 +70,7 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia/settings"'
+alias wgat='wget --no-hist'
 
 alias vim='nvim'
 
