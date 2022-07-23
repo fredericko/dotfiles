@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-wget -q --tries=10 --timeout=20 --spider http://duckduckgo.com
+wget -q --no-hsts --tries=10 --timeout=20 --spider http://duckduckgo.com
 if [[ $? -eq 0 ]]; then 
     $(curl "wttr.in/?format=j1" -o /tmp/weather)
 fi

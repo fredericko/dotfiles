@@ -2,6 +2,7 @@
 
 # Lines configured by zsh-newuser-install
 setopt promptsubst
+setopt interactive_comments
 stty stop undef # Disable ctrl+s to freeze terminal
 zle_highlight=('paste:none')
 HISTSIZE=100000
@@ -13,11 +14,22 @@ zstyle :compinstall filename '~/.zshrc'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-autoload -Uz compinit
+autoload -Uz compinit 
+autoload -Uz colors && colors
 compinit
 # End of lines added by compinstall
 
+source "$ZDOTDIR/zsh-functions"
+
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-source $XDG_CONFIG_HOME/zsh/scripts/agnoster.zsh-theme
-source $XDG_CONFIG_HOME/zsh/scripts/zsh-syntax-highlighting.zsh
-source /opt/asdf-vm/asdf.sh 
+
+
+zsh_add_file "zsh-prompt"
+
+# zsh_add_plugin "agnoster.zsh-theme"
+
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
+
+[[ -f "/opt/asdf-vm/asdf.sh" ]] && source /opt/asdf-vm/asdf.sh 
