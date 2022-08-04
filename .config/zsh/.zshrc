@@ -21,7 +21,7 @@ compinit
 
 source "$ZDOTDIR/zsh-functions"
 
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 
 zsh_add_file "zsh-prompt"

@@ -51,9 +51,8 @@ interval=10
 label= 
 interval=600
 
-[time]
+[date]
 label= 
-command=date '+%d/%m/%Y (%a) %H:%M'
 interval=5
 
 
