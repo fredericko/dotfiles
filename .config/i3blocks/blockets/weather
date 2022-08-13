@@ -2,6 +2,6 @@
 
 wget -q --no-hsts --tries=10 --timeout=20 --spider http://duckduckgo.com
 if [[ $? -eq 0 ]]; then 
-    $(curl "wttr.in/?format=j1" -o /tmp/weather)
+    $(curl -s "wttr.in/?format=j1" -o /tmp/weather)
 fi
 echo $(jq '.current_condition[0].temp_C, .current_condition[0].FeelsLikeC, .current_condition[0].humidity' /tmp/weather | tr '\n' ':' | awk -F: '{print $1"("$2")°C  "$3"%"}' | tr -d '"')

@@ -1,0 +1,36 @@
+# Reload functions
+super + Escape
+	"$XDG_CONFIG_HOME"/sxhkd/functions
+
+# WM Agnostic Keybindings
+
+super + Return
+  $TERMINAL
+
+super + w
+  pkill -USR1 -x sxhkd
+
+super + p
+  rofi -show drun
+
+XF86AudioRaiseVolume 
+  pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume 
+  pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute 
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioMicMute 
+  pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+Print
+  flameshot gui
+
+# I3 keybinding
+super + q
+  i3 kill window
+
+
+

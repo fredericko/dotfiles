@@ -15,6 +15,7 @@ bindkey -e
 export EDITOR='nvim'
 export VISUAL='nvim'
 export READER='zathura'
+export TERMINAL='alacritty'
 #export BROWSER='brave'
 
 ###############################################

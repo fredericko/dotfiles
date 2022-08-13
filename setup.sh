@@ -15,6 +15,6 @@ do
     fi
 done
 
-packages="git zsh neovim xorg picom nitrogen i3-gaps i3blocks newsboat"
+packages="git zsh neovim xorg xorg-xinit wget jq pipewire pipewire-pulse picom nitrogen i3-gaps polybar sxhkd dmenu newsboat"
 
 sudo ${package_manager} ${packages}
