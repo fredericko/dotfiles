@@ -10,8 +10,8 @@ super + Return
 super + w
   pkill -USR1 -x sxhkd
 
-super + p
-  rofi -show drun
+super + d
+  rofi -show drun -show-icons
 
 XF86AudioRaiseVolume 
   pactl set-sink-volume @DEFAULT_SINK@ +5%

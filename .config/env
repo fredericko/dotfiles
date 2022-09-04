@@ -140,4 +140,4 @@ alias hw="hwinfo --short"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
-sfetch 2>/dev/null 
+# sfetch 2>/dev/null 

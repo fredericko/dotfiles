@@ -22,6 +22,12 @@ font:
   # Point size
   size: 8.5
 
+cursor:
+  style:
+    shape: beam
+  vi_mode_style:
+    shape: Block
+
 window:
   opacity: 0.8
 
