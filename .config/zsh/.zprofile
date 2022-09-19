@@ -15,5 +15,5 @@ export SSH_AUTH_SOCK="$GNOME_KEYRING_CONTROL/ssh"
 source "$HOME/.zshrc"
 
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-  pgrep i3 || startx "$XDG_CONFIG_HOME/X11/xinitrc"
+  pgrep bspwm || startx "$XDG_CONFIG_HOME/X11/xinitrc"
 fi
