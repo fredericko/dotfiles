@@ -16,7 +16,7 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export READER='zathura'
 export TERMINAL='alacritty'
-#export BROWSER='brave'
+export BROWSER='firefox'
 
 ###############################################
 ##               XDG Paths                   ##
@@ -65,79 +65,3 @@ export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
 
 
-###############################################
-##              Aliases                      ##
-###############################################
-
-alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
-alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia/settings"'
-alias wgat='wget --no-hist'
-
-alias vim='nvim'
-
-#list
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -la'
-alias l='ls'
-alias l.="ls -A | egrep '^\.'"
-
-#fix obvious typo's
-alias cd..='cd ..'
-alias pdw="pwd"
-alias udpate='sudo pacman -Syyu'
-alias upate='sudo pacman -Syyu'
-alias updte='sudo pacman -Syyu'
-alias updqte='sudo pacman -Syyu'
-
-## Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-
-#readable output
-alias df='df -h'
-
-#pacman unlock
-alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
-
-#arcolinux logout unlock
-alias rmlogoutlock="sudo rm /tmp/arcologout.lock"
-
-#which graphical card is working
-alias whichvga="/usr/local/bin/arcolinux-which-vga"
-
-#free
-alias free="free -mt"
-
-#continue download
-alias wget="wget -c"
-
-#userlist
-alias userlist="cut -d: -f1 /etc/passwd"
-
-#merge new settings
-alias merge="xrdb -merge ~/.Xresources"
-
-# Aliases for software managment
-# pacman or pm
-alias pacman='sudo pacman --color auto'
-alias update='sudo pacman -Syyu'
-
-#ps
-alias psa="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
-
-#switch between bash and zsh
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
-#hardware info --short
-alias hw="hwinfo --short"
-
-#shutdown or reboot
-alias ssn="sudo shutdown now"
-alias sr="sudo reboot"
-
-# sfetch 2>/dev/null 

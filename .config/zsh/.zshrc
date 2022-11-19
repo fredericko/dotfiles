@@ -1,4 +1,5 @@
 [ -f "$HOME/.config/env" ] && source "$HOME/.config/env"
+[ -f "$HOME/.config/alias" ] && source "$HOME/.config/alias"
 
 # Lines configured by zsh-newuser-install
 setopt promptsubst
