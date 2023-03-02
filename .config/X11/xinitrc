@@ -4,3 +4,5 @@ sxhkd&
 dunst&
 
 exec bspwm 
+
+alacritty&
