@@ -1,5 +1,5 @@
-[ -f "$HOME/.config/env" ] && source "$HOME/.config/env"
-[ -f "$HOME/.config/alias" ] && source "$HOME/.config/alias"
+[ -f "$HOME/.config/exports" ] && source "$HOME/.config/exports"
+[ -f "$HOME/.config/aliases" ] && source "$HOME/.config/aliases"
 
 # Lines configured by zsh-newuser-install
 setopt promptsubst
@@ -21,8 +21,6 @@ compinit
 # End of lines added by compinstall
 
 source "$ZDOTDIR/zsh-functions"
-
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 
 zsh_add_file "zsh-prompt"
