@@ -8,7 +8,7 @@ if not config_status_ok then
   return
 end
 
-local icons = require("user.icons")
+-- local icons = require("user.icons")
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
@@ -21,18 +21,17 @@ nvim_tree.setup {
   -- },
   -- disable_netrw = true,
   -- hijack_netrw = true,
-  -- open_on_setup = false,
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
+  -- ignore_ft_on_setup = {
+  --   "startify",
+  --   "dashboard",
+  --   "alpha",
+  -- },
   filters = {
     custom = { ".git" },
     exclude = { ".gitignore" },
   },
   -- auto_close = true,
-  -- open_on_tab = false,
+  -- open_on_tab = true,
   -- hijack_cursor = false,
   update_cwd = true,
   -- update_to_buf_dir = {
@@ -73,8 +72,8 @@ nvim_tree.setup {
         default = "",
         symlink = "",
         folder = {
-          arrow_open = icons.ui.ArrowOpen,
-          arrow_closed = icons.ui.ArrowClosed,
+          arrow_open = "", 
+          arrow_closed = "",
           default = "",
           open = "",
           empty = "",

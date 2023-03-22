@@ -8,33 +8,10 @@ if not snip_status_ok then
   return
 end
 
-local tabnine_status_ok, tabnine = pcall(require, "user.tabnine")
-if not tabnine_status_ok then
-  return
-end
-
-tabnine.setup()
-
-require("luasnip/loaders/from_vscode").lazy_load()
-
--- local check_backspace = function()
---   local col = vim.fn.col "." - 1
---   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
--- end
-
 local check_backspace = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
-
-local icons = require "user.icons"
-
-local kind_icons = icons.kind
-
-vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
-vim.api.nvim_set_hl(0, "CmpItemKindTabnine", { fg = "#CA42F0" })
-vim.api.nvim_set_hl(0, "CmpItemKindEmoji", { fg = "#FDE030" })
-vim.api.nvim_set_hl(0, "CmpItemKindCrate", { fg = "#F64D00" })
 
 cmp.setup {
   snippet = {
@@ -89,54 +66,6 @@ cmp.setup {
       "i",
       "s",
     }),
-  },
-  formatting = {
-    fields = { "kind", "abbr", "menu" },
-    format = function(entry, vim_item)
-      -- Kind icons
-      vim_item.kind = kind_icons[vim_item.kind]
-
-      if entry.source.name == "cmp_tabnine" then
-        vim_item.kind = icons.misc.Robot
-        vim_item.kind_hl_group = "CmpItemKindTabnine"
-      end
-      if entry.source.name == "copilot" then
-        vim_item.kind = icons.git.Octoface
-        vim_item.kind_hl_group = "CmpItemKindCopilot"
-      end
-
-      if entry.source.name == "emoji" then
-        vim_item.kind = icons.misc.Smiley
-        vim_item.kind_hl_group = "CmpItemKindEmoji"
-      end
-
-      if entry.source.name == "crates" then
-        vim_item.kind = icons.misc.Package
-        vim_item.kind_hl_group = "CmpItemKindCrate"
-      end
-
-      -- NOTE: order matters
-      vim_item.menu = ({
-        nvim_lsp = "",
-        nvim_lua = "",
-        luasnip = "",
-        buffer = "",
-        path = "",
-        emoji = "",
-      })[entry.source.name]
-      return vim_item
-    end,
-  },
-  sources = {
-    { name = "crates", group_index = 1 },
-    { name = "nvim_lsp", group_index = 2 },
-    { name = "nvim_lua", group_index = 2 },
-    { name = "copilot", group_index = 2 },
-    { name = "luasnip", group_index = 2 },
-    { name = "buffer", group_index = 2 },
-    { name = "cmp_tabnine", group_index = 2 },
-    { name = "path", group_index = 2 },
-    { name = "emoji", group_index = 2 },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
