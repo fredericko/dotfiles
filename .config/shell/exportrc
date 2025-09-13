@@ -51,6 +51,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority" #Breaks yuzu emulator
 export SCREENRC="$XDG_CONFIG_HOME/screen/screenrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+# export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"  #not working
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
 export PATH="$HOME/.symfony/bin:$PATH"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"

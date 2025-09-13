@@ -1,33 +1,29 @@
+# Setup
 
-# Preview
+### Clone the repo and cd into it
+``
+    git clone --bare https://github.com/fredericko/dotfiles.git $HOME/.dotfiles && cd $HOME/.dotfiles 
+``
 
-![Setup Image](Pictures/setup-image.png)
+### Get the master worktree and cd into it
+```
+    git worktree add master && cd master
 
-# Config Dependencies
+```
 
-#### Most Packages should be available in the distro's standard repository
+### Source aliases and checkout master using dot alias
+```
+    source .config/aliases && dot checkout master
+```
 
-|Packages             |  Url          |Description                                                                            
-|---------            | -----         |-----------                                                                            
-|🗔  Bspwm             |[Github][1]    |Minimal Window Manager                                                                 
-|🗖  Polybar           |[Github][2]    |Desktop Manager Agnostic Status bar                                                    
-|   Picom             |[Github][4]    |Compositor to make windows transparent                                                 
-|🖵  Zsh               |               |Highly customizable shell                                                              
-|🖹  Neovim            |               |Highly customizable/extendable text editor                                             
-|🖽  Nitrogen          |               |Background image manager                                                               
-|🗛  Nerd Font (any)   |[Github][5]    |Patched fonts with glyphs of all popular fonts like font awesome and material design   
-|📰 Newsboat          |[Github][6]    |Terminal based rss feed                                                                
-|🖴  Udiskie           |               |USB Automatic Mounter                                                                  
+### Run setup.sh to add dependencies
+```
+    ./setup.sh
+```
 
-[1]: https://github.com/baskerville/bspwm 
-[2]: https://github.com/polybar/polybar 
-[3]: https://github.com/neovim/neovim
-[4]: https://github.com/ryanoasis/nerd-fonts
-[5]: https://github.com/newsboat/newsboat 
+### Install [Zap](https://www.zapzsh.com/)
+```
+    zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+```
 
 
-# Themes
-
-- Alacritty theme [One Dark Pro][8]
-
-[7]: https://github.com/eendroroy/alacritty-theme/blob/master/themes/one_dark.yaml 

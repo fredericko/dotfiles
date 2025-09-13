@@ -1,6 +1,5 @@
-#!/usr/bin/sh
+#!/usr/bin/bash
 
-#!/bin/bash
 declare -A osInfo;
 osInfo[/etc/debian_version]="apt-get install -y"
 osInfo[/etc/alpine-release]="apk --update add"
@@ -15,6 +14,6 @@ do
     fi
 done
 
-packages="git zsh neovim xorg xorg-xinit wget jq pipewire pipewire-pulse picom dunst nitrogen bspwm polybar sxhkd rofi newsboat"
+packages="git zsh neovim xorg get pipewire pipewire-pulse eza"
 
 sudo ${package_manager} ${packages}
