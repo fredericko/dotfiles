@@ -1,14 +1,13 @@
 # Setup
 
 ### Clone the repo and cd into it
-``
+```
     git clone --bare https://github.com/fredericko/dotfiles.git $HOME/.dotfiles && cd $HOME/.dotfiles 
-``
+```
 
 ### Get the master worktree and cd into it
 ```
     git worktree add master && cd master
-
 ```
 
 ### Source aliases and checkout master using dot alias

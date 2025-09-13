@@ -12,15 +12,15 @@ SAVEHIST=100000
 # The following lines were added by compinstall
 zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' menu select
+zmodload zsh/complist
+_comp_options+=(globdots)		# Include hidden files.
+
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 autoload -Uz compinit 
 autoload -Uz colors && colors
 compinit
-
 # End of lines added by compinstall
-
-bindkey -e
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
