@@ -33,6 +33,11 @@ export XDG_STATE_HOME="$HOME/.local/state"
 #ignore upper and lowercase when TAB completion
 #bind "set completion-ignore-case on"
 
+# Add things to path
+[ -d "$HOME/.symfony/bin" ] && PATH="$HOME/.symfony/bin:$PATH"
+[ -d "$HOME/vendor/bin" ] && PATH="$HOME/vendor/bin:$PATH"
+[ -d "$HOME/programs/lua-language-server/bin" ] && PATH="$HOME/programs/lua-language-server/bin:$PATH"
+
 
 ###############################################
 #             $HOME Clean-up:                ##
@@ -53,7 +58,6 @@ export SCREENRC="$XDG_CONFIG_HOME/screen/screenrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 # export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump"  #not working
 export HISTFILE="$XDG_STATE_HOME/zsh/history"
-export PATH="$HOME/.symfony/bin:$PATH"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 export USERXSESSIONRC="$XDG_CACHE_HOME/X11/xsessionrc"
 export USERXSESSION="$XDG_CACHE_HOME/X11/xsession"
