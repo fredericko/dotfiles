@@ -14,6 +14,6 @@ do
     fi
 done
 
-packages="git zsh neovim xorg get pipewire pipewire-pulse eza fzf"
+packages="git zsh neovim xorg alacritty pipewire pipewire-pulse eza fzf"
 
 sudo ${package_manager} ${packages}
